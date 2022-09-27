@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins"
+}
+
+.tools {
+  display: flex;
+  margin: 25px 250px;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tools label {
+  display: block;
+  color: #555;
+}
+
+.tools input {
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.tools select {
+  background: #fff;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  padding: 3px 7px;
+  border-radius: 5px;
+  margin-top: 5px;
+  float: right;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  justify-content: space-evenly;
+  margin: 0 250px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  padding: 5px 30px 30px 30px;
+}
+
+.ressourceCard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+  padding: 25px;
+  margin-top: 25px;
+  width: 550px;
+  height: min-content;
+}
+
+.ressourceCard .triangle {
+  transition: .1s
+}
+
+.ressourceCard .triangle {
+  width: 13px;
+  height: 13px;
+  border-top: 3px solid #3743b1;
+  border-right: 3px solid #3743b1;
+  border-radius: 0px;
+  rotate: 45deg;
+}
+
+.ressourceCard.toggle .triangle {
+  rotate: 135deg;
+  transform: translate(-50%);
+}
+
+.ressourceCard .left h3 {
+  gap: 5px;
+}
+
+.ressourceCard .closedContent {
+  width: 100%;
+  cursor: pointer;
+}
+
+.ressourceCard .closedContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ressourceCard .closedContent * {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.ressourceCard .author {
+  color: #555;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.ressourceCard .hidden {
+  display: none;
+  margin-top: 15px;
+}
+
+.ressourceCard.toggle .hidden {
+  display: block;
+}
+
+.ressourceCard .btn {
+  background: #3743b1;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+}
+
+.ressourceCard .rate {
+  float: right;
+  margin-top: 20px;
+  direction: rtl;
+  display: flex;
+}
+
+.ressourceCard .rate svg {
+  transition: .1s;
+  fill: none;
+  stroke: #111;
+}
+
+.ressourceCard .rate svg:hover,
+.ressourceCard .rate svg:hover~svg {
+  fill: #3743b1;
+  stroke: #3743b1;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 481px) {
+  .ressourceCard {
+    width: 90%;
+    margin-top: 25px;
+  }
+
+  .ressourceCard .closedContent {
+    flex-wrap: wrap;
+    gap: 10px
+  }
+
+  .ressourceCard .rate {
+    margin-top: 20px;
+    float: none;
+    display: block;
+    width: max-content;
+  }
+
+  .ressourceCard .author {
+    display: none;
+  }
+
+  .ressourceCard.toggle .author {
+    display: flex;
+  }
+
+  .tools select {
+    float: none;
+  }
+
+  .tools {
+    margin: 20px;
+  }
+
+  .cardsContainer {
+    margin: 0 20px;
+    gap: 0;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+}
+
+nav.header {
+    width: 100%;
+  }
+  
+  nav .button {
+    height: max-content;
+  }
+  
+  .tools select {
+    float: none !important;
+  }
